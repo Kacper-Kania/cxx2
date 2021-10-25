@@ -3,42 +3,41 @@ using namespace std;
 
 int main()
 {
-    int height;
+    int wys;
 
-    //1
     cout << "Wysokosc trojkata : "; 
-	cin >> height;
+	cin >> wys;
 
-    //2
-    for (int i = 1; i <= height; i++)
+  
+    for (int i = 1; i <= wys; i++)
     {
-        //3
-        for (int j = 1; j <= (height - i); j++)
+     
+        for (int j = 1; j <= (wys - i); j++)
         {
             cout << " ";
         }
 
-        //4
+ 
         for (int k = 1; k <= i * 2 - 1; k++)
         {
-            //5
+        
             if (k == 1 || k == i * 2 - 1)
             {
                 cout << "*";
             }
-            else if (i == height)
+            else if (i == wys)
             {
-                //6
+           
                 cout << "*";
             }
             else
             {
-                //7
+            
                 cout << " ";
             }
 
         }
-        //8
+      
         cout << endl;
     }
     return 0;
