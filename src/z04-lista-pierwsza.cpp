@@ -24,7 +24,7 @@ auto main() -> int
 		std::cout<<"Liczba "<<n<<" jest pierwsza";
 	else
 		std::cout<<"Liczba "<<n<<" nie jest pierwsza";
-	
+	std::cout<<"\n";
 	return 0;
 }
 
