@@ -23,10 +23,14 @@ cout << "Miesiac ten ma 31 dni";
 if (miesiac == 4 || miesiac == 6 || miesiac == 9 || miesiac == 11)
 cout << "Miesiac ten ma 30 dni";
 
-if (miesiac == 2 && rok%4 == 0)
-cout << "Miesiac ten ma 29 dni";
-else if (rok%4 == 1 || rok%4 == 2 || rok%4 == 3)
-cout << "Miesiac ten ma 28 dni";
+else if ( miesiac == 2)
+{
+bool przestepny = (rok % 4 == 0 && rok % 100 !=0) || (rok % 400 == 0);
 
+if (przestepny == 0)
+cout << " Miesiac ten ma 28 dni";
+else
+cout <<" Miesiac ten ma 29 dni";
+}
 return 0;
 }

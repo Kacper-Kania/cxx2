@@ -14,7 +14,7 @@ int main()
      
         for (int j = 1; j <= (wys - i); j++)
         {
-            cout << " ";
+            cout << "*";
         }
 
  
@@ -37,6 +37,12 @@ int main()
             }
 
         }
+
+	 for (int j = 1; j <= (wys - i); j++)
+        {
+            cout << "*";
+        }
+
       
         cout << endl;
     }
