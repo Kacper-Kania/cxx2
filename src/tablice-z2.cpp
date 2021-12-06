@@ -1,42 +1,45 @@
 #include <iostream>
 
-using namespace std;
 
-auto wypisz_tablice(int a[], int n) -> void 
+auto wypisz_tablice(std::string text) -> int 
 {
-        for(int i = 0; i < n; i++)
-        {
-                cout << a[i] <<" ";
-        }
+        int n;
+	std::cout << text << "\n";
+	std::cin >> n;
+	return n;
 }
 
+auto init(int a[], int n) -> void
+{
+	for (int i = 0; i < n; i++)
+	{
+	a[i] = 0;
+	}
+}
 
 auto iota(int a[], int n, int start) -> void
 {
         for(int i = 0; i < n; i++)
         {
-                 a[i] = 0;
+                 a[i] = start;
+		start++;
         }
 }
 
 
-int main() 
+auto main() -> int 
 {
-        int n=0;
+        int n = wypisz_tablice("ile ma byc liczb?");
+	int p = wypisz_tablice("od kiedy start?");
         int a[100];
-	int start=0;
+	int i = 0;
 
+        iota(a,n,p);
 
-	cout << "Od ktorej liczby zaczac ";
-	cin >> start;
-
-        cout << "Ile liczb ma zostac wyswietlonych ";
-        cin >> n;
-
-        iota(a,n,start);
-
-        wypisz_tablice(a,n);
-
+        while(i < n) {
+	std::cout << a[i] << "\n";
+	i++;
+}
 return 0;
 }
 
