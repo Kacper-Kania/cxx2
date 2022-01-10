@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <vector>
 
 auto is_palindrome(std::string palindrome) -> bool
 {
@@ -13,8 +14,9 @@ for (int i=1; i<=a; i++){
 }
 return result;
 }
-auto filtr(std::vector< std::string > vec) ->
-int main()
+auto filtr(std::vector < std::string > vec) ->
+auto main -> int
 {
-std::vector < std::string > vec = {"oko", "kajak","bober"};
+std::vector < std::string > vec = {"ala", "ucho","kanapa"};
+return 0;
 }
